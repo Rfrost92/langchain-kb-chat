@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Knowledge Base Chat (LangChain RAG Demo)
+
+A simple and clean Retrieval-Augmented Generation (RAG) demo built with **Next.js**, **LangChain**, and **OpenAI**.  
+Paste any text (FAQ, docs, articles, policies) and ask questions — the AI answers **strictly based on your provided content**.
+
+---
+
+## Features
+- Paste any long-form text as a knowledge base
+- Automatic text chunking with LangChain
+- OpenAI embeddings (`text-embedding-3-small`)
+- In-memory vector search using cosine similarity
+- Clean chat-style interface
+- GPT-4o-mini for accurate, context-based answers
+- Fully local demo — nothing stored
+
+---
+
+## Tech Stack
+- **Next.js 14** (App Router)
+- **React / TypeScript**
+- **Tailwind CSS**
+- **OpenAI API** (GPT-4o-mini, embeddings)
+- **LangChain** (text splitting)
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Clone the repo
 ```bash
+1. git clone https://github.com/YOUR_USERNAME/langchain-kb-chat.git
+cd langchain-kb-chat
+2. Install dependencies
+npm install
+
+3. Add your API key
+
+Create .env.local:
+
+OPENAI_API_KEY=your_key_here
+
+4. Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+http://localhost:3000
